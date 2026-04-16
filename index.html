@@ -10,8 +10,31 @@
 
 <div id="root">
 
-  <!-- ── SETUP ─────────────────────────────── -->
-  <div id="S">
+  <!-- ── REGLAS ──────────────────────────────── -->
+  <div id="rules-screen">
+    <h1>🎲 100 Exactos</h1>
+    <p class="tag">El primero en llegar a cien exactos gana</p>
+
+    <div class="rules-box">
+      <div class="rules-title">📜 Reglas del juego</div>
+      <ul class="rules-list">
+        <li>Jugá de <strong>2 a 6 jugadores</strong>, cada uno en su turno.</li>
+        <li>En tu turno podés <strong>tirar los dados</strong> las veces que quieras.</li>
+        <li>Cada tirada <strong>suma ambos dados</strong> a tu puntaje del turno.</li>
+        <li>Si sale <strong>un solo 1</strong> → perdés todo lo acumulado en el turno y pasa el siguiente.</li>
+        <li>Si salen <strong>dos 1 juntos</strong> → tu puntaje total vuelve a cero y pasa el siguiente.</li>
+        <li>Podés <strong>plantarte</strong> para sumar el turno a tu total.</li>
+        <li>Ganás llegando a <strong>exactamente 100 puntos</strong>. Si te pasás, seguís tirando hasta sacar un 1.</li>
+      </ul>
+    </div>
+
+    <div class="rules-hint">💡 En PC también podés tirar con la <strong>barra espaciadora</strong></div>
+
+    <button id="rules-btn">¡Entendido, a jugar! 🎲</button>
+  </div>
+
+  <!-- ── SETUP ──────────────────────────────── -->
+  <div id="S" style="display:none">
     <h1>🎲 100 Exactos</h1>
     <p class="tag">El primero en llegar a cien exactos gana</p>
 
@@ -60,7 +83,7 @@
           <div class="die" id="D1"></div>
           <div class="die" id="D2"></div>
         </div>
-        <div class="hint">↑ clic para tirar</div>
+        <div class="hint">↑ clic para tirar · <kbd>espacio</kbd> en PC</div>
 
         <div class="SR">
           <div class="SB"><div class="SBl">Este turno</div><div class="SBv" id="TV">0</div></div>
@@ -84,6 +107,7 @@
   <!-- Modal -->
   <div id="MW">
     <div class="mbox">
+      <canvas id="fw-canvas"></canvas>
       <div class="mico" id="MI"></div>
       <div class="mttl" id="MT"></div>
       <div class="mtxt" id="MX"></div>
@@ -92,6 +116,11 @@
   </div>
 
 </div>
+
+<!-- Footer -->
+<footer>
+  Developed by <strong>Pablo Pellizzoni</strong> for BarGames
+</footer>
 
 <script src="script.js"></script>
 </body>
