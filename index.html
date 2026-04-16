@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 100 Exactos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="root">
+
+  <!-- ── SETUP ─────────────────────────────── -->
+  <div id="S">
+    <h1>🎲 100 Exactos</h1>
+    <p class="tag">El primero en llegar a cien exactos gana</p>
+
+    <label class="lbl">Jugadores</label>
+    <div class="cnt">
+      <button class="cb on" data-c="2">2</button>
+      <button class="cb"    data-c="3">3</button>
+      <button class="cb"    data-c="4">4</button>
+      <button class="cb"    data-c="5">5</button>
+      <button class="cb"    data-c="6">6</button>
+    </div>
+
+    <label class="lbl">Nombres</label>
+    <div id="NW"></div>
+
+    <button id="GO">EMPEZAR PARTIDA</button>
+  </div>
+
+  <!-- ── JUEGO ──────────────────────────────── -->
+  <div id="G">
+    <div class="ghd">
+      <span class="gln"></span>
+      <span class="gtx">🎲 100 exactos 🎲</span>
+      <span class="glnr"></span>
+    </div>
+
+    <div class="gw">
+
+      <!-- Scoreboard -->
+      <div class="lc">
+        <div class="SCtit">— puntajes —</div>
+        <div id="SR2"></div>
+        <div class="rst-w">
+          <button class="rstb" id="RST">↺ Nueva partida</button>
+        </div>
+      </div>
+
+      <!-- Área de juego -->
+      <div class="rc">
+        <div class="PB" id="PB">
+          <div class="PBl">Turno de</div>
+          <div class="PBn" id="CN">—</div>
+        </div>
+
+        <div class="DT" id="DT">
+          <div class="die" id="D1"></div>
+          <div class="die" id="D2"></div>
+        </div>
+        <div class="hint">↑ clic para tirar</div>
+
+        <div class="SR">
+          <div class="SB"><div class="SBl">Este turno</div><div class="SBv" id="TV">0</div></div>
+          <div class="SB"><div class="SBl">Faltan</div><div class="SBv" id="NV">100</div></div>
+        </div>
+
+        <div class="fmsg" id="FM"></div>
+
+        <div class="BR">
+          <button class="btn" id="RB">🎲 Tirar</button>
+          <button class="btn BTH" id="HB" disabled>✋ Plantarse</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- Modal -->
+  <div id="MW">
+    <div class="mbox">
+      <div class="mico" id="MI"></div>
+      <div class="mttl" id="MT"></div>
+      <div class="mtxt" id="MX"></div>
+      <div class="mbtns" id="MB"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
